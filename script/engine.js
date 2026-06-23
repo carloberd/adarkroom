@@ -312,6 +312,11 @@
               _('or migrating computers')
             ],
             buttons: {
+              'save': {
+                text: _('save'),
+                nextScene: 'end',
+                onChoose: function() { Engine.saveGame(); }
+              },
               'export': {
                 text: _('export'),
                 nextScene: {1: 'inputExport'}
