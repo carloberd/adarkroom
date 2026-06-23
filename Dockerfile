@@ -1,7 +1,7 @@
 FROM node:alpine
 WORKDIR /app
-COPY package.json yarn.lock ./
-RUN yarn install --production
+COPY package.json ./
+RUN npm install --omit=dev
 COPY . .
 EXPOSE 8080
 CMD ["node", "dev-server.js"]
