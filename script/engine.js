@@ -279,6 +279,11 @@
           Engine._lastNotify = Date.now();
         }
         localStorage.gameState = JSON.stringify(State);
+        fetch('/api/save', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: localStorage.gameState
+        }).catch(function() {});
       }
     },
 
@@ -938,5 +943,10 @@ $.Dispatch = function( id ) {
 };
 
 $(function() {
-  Engine.init();
+  fetch('/api/save')
+    .then(function(r) { return r.ok ? r.json() : null; })
+    .catch(function() { return null; })
+    .then(function(serverState) {
+      Engine.init(serverState ? { state: serverState } : {});
+    });
 });
