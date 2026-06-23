@@ -619,7 +619,7 @@
       var panelWidth = Engine.getPanelWidth();
       slider.animate({left: -(panelIndex * panelWidth) + 'px'}, 300 * diff);
 
-      if($SM.get('stores.wood') !== undefined) {
+      if($SM.get('stores.wood') !== undefined && window.innerWidth > 700) {
         // FIXME Why does this work if there's an animation queue...?
         stores.animate({right: -(panelIndex * panelWidth) + 'px'}, 300 * diff);
       }
@@ -650,6 +650,9 @@
 
       // If we don't have a storesContainer yet, leave.
       if(typeof(stores) === 'undefined') return;
+
+      // On narrow viewports, stores are statically positioned via CSS; skip animation.
+      if(window.innerWidth <= 700) return;
 
       if(typeof(transition_diff) === 'undefined') transition_diff = 1;
 

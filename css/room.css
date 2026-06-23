@@ -58,3 +58,24 @@ div#weapons {
 	padding: 5px 10px;
 	width: 200px;
 }
+
+/* ── Mobile layout (narrow viewports) ── */
+@media (max-width: 700px) {
+	div#storesContainer {
+		position: static;
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+		padding-bottom: 8px;
+		margin-bottom: 12px;
+		border-bottom: 1px solid black;
+	}
+
+	div#stores, div#weapons {
+		flex: 1;
+		min-width: 130px;
+		width: auto;
+		margin-top: 0;
+	}
+}

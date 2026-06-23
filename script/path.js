@@ -119,7 +119,7 @@ var Path = {
 				perks.prependTo(Path.panel);
 			}
 			
-			if(!ignoreStores && Engine.activeModule === Path) {
+			if(!ignoreStores && Engine.activeModule === Path && window.innerWidth > 700) {
 				$('#storesContainer').css({top: perks.height() + 26 + Path._STORES_OFFSET + 'px'});
 			}
 		}

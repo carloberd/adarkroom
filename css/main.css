@@ -666,3 +666,20 @@ body.noMask #description {
 #dropMenu > div:hover {
 	text-decoration: underline;
 }
+
+/* ── Mobile layout (narrow viewports) ── */
+@media (max-width: 700px) {
+	div#wrapper {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	/* Notifications: keep absolute but shrink to a left-edge overlay.
+	   With no left padding on #wrapper, left:0 is now the content edge. */
+	div#notifications {
+		width: 45%;
+		max-width: 180px;
+		min-height: 0;
+		background: rgba(255, 255, 255, 0.88);
+	}
+}

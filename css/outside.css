@@ -58,3 +58,20 @@ div#workers {
 div.storeRow div.tooltip {
 	width: 160px;
 }
+
+/* ── Mobile layout (narrow viewports) ── */
+@media (max-width: 700px) {
+	div#village {
+		position: static;
+		width: 100%;
+		margin-bottom: 8px;
+	}
+
+	div#workers {
+		position: static;
+		width: 100%;
+		left: 0;
+		top: 0;
+		margin-bottom: 8px;
+	}
+}

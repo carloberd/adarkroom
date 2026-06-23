@@ -470,7 +470,7 @@ var Outside = {
 		
 		this.setTitle();
 
-		if(!ignoreStores && Engine.activeModule === Outside && village.children().length > 1) {
+		if(!ignoreStores && Engine.activeModule === Outside && village.children().length > 1 && window.innerWidth > 700) {
 			$('#storesContainer').css({top: village.height() + 26 + Outside._STORES_OFFSET + 'px'});
 		}
 	},

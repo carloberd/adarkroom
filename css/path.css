@@ -66,3 +66,21 @@ div.perkRow .row_key {
 	width: 475px;
 	overflow-y: auto;
 }
+
+/* ── Mobile layout (narrow viewports) ── */
+@media (max-width: 700px) {
+	div#perks {
+		position: static;
+		width: 100%;
+		margin-bottom: 8px;
+	}
+
+	#pathScroller {
+		width: 100%;
+		max-height: none;
+	}
+
+	#outfitting {
+		width: auto;
+	}
+}
