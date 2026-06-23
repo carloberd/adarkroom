@@ -40,7 +40,8 @@ div.clear {
 
 div#wrapper {
 	margin: auto;
-	width: 700px;
+	max-width: 700px;
+	width: 100%;
 	padding: 20px 0 0 220px;
 	position: relative;
 }
@@ -177,7 +178,8 @@ div#outerSlider {
 div#outerSlider > div {
 	position: relative;
 	float: left;
-	width: 700px;
+	width: 100vw;
+	max-width: 700px;
 	height: 700px;
 	overflow: hidden;
 }
@@ -189,7 +191,8 @@ div#locationSlider {
 div.location {
 	position: relative;
 	float: left;
-	width: 700px;
+	width: 100vw;
+	max-width: 700px;
 }
 
 div.row_key {
@@ -211,7 +214,7 @@ div#notifications {
 	position: absolute;
 	top: 20px;
 	left: 0px;
-	height: 700px;
+	min-height: 700px;
 	width: 200px;
 	overflow: hidden;
 }
